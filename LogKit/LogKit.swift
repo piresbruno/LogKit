@@ -3,7 +3,7 @@
 //  LogKit
 //
 //  Created by Bruno Pires on 26/05/16.
-//  Copyright © 2016 BlasterSystems. All rights reserved.
+//  Copyright © 2016 Bruno Pires. All rights reserved.
 //
 
 import Foundation
