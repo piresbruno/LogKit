@@ -5,7 +5,7 @@ xcode_sdk: iphonesimulator9.3.1
 before_script:
 - brew update
 - brew upgrade
-- brew upgrade xctool
+- brew outdated xctool || brew upgrade xctool
 script: 
 - xctool -scheme LogKit -sdk iphonesimulator build  
 - xctool -scheme LogKit -sdk iphonesimulator run-tests
