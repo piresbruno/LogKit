@@ -44,4 +44,4 @@ This framework was inspired in the work of other logging frameworks, but not a c
 
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/piresbruno/LogKit/releases) ![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
-![build](https://travis-ci.org/piresbruno/LogKit.svg?branch=master)
+![build](https://www.bitrise.io/app/93bb51c1de5dd228.svg?token=QzEV4V8xkznqBPDKyChWLA)
