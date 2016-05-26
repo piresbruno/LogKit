@@ -1,0 +1,17 @@
+language: objective-c
+osx_image: xcode7.3.1
+xcode_project: LogKit
+xcode_sdk: iphonesimulator9.3.1
+env:
+  global: 
+    - FRAMEWORK_NAME=LogKit
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_script:
+  # bootstrap the dependencies for the project
+  # you can remove if you don't have dependencies
+  - carthage bootstrap  
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
