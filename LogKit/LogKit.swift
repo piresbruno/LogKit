@@ -13,7 +13,7 @@ public class LogKit {
     private static let instance = LogKit()
     private var level:LogLevel = .Disabled
     
-    class func setup(level:LogLevel){
+    public class func setup(level:LogLevel){
         self.instance.level = level
     }
     
