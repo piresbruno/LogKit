@@ -29,16 +29,17 @@ class LogKit {
                      _ function: String = #function,
                        _ lineNumber: Int = #line){
         
-        let filePath = path.componentsSeparatedByString("/")
+        let filePath = path.components(separatedBy: "/")
             .last!
-            .stringByReplacingOccurrencesOfString("swift", withString: function)
-            .stringByReplacingOccurrencesOfString("()", withString: "")
+            .replacingOccurrences(of: "swift", with: function)
+            .replacingOccurrences(of:"()", with: "")
         
-        let dateFormatter = NSDateFormatter()
+        
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss:SSS"
         
         if self.instance.level >= level && level != LogLevel.Disabled{
-            print("\(level.description.uppercaseString) | \(dateFormatter.stringFromDate(NSDate())) [\(filePath):\(lineNumber)]: \(message)")
+            print("\(level.description.uppercased()) | \(dateFormatter.string(from: NSDate() as Date)) [\(filePath):\(lineNumber)]: \(message)")
         }
     }
 }
