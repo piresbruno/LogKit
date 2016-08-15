@@ -8,12 +8,12 @@
 
 import Foundation
 
-class LogKit {
+public class LogKit {
     
     private static let instance = LogKit()
     private var level:LogLevel = .Disabled
     
-    class func setup(level:LogLevel){
+    public class func setup(level:LogLevel){
         self.instance.level = level
     }
     
@@ -23,7 +23,7 @@ class LogKit {
     ///   - level: LogLevel wanted
     ///   - message: message to be written in the debug console
     /// - returns: Void
-    class func log(level:LogLevel,
+    public class func log(level:LogLevel,
                    message:AnyObject,
                    _ path: String = #file,
                      _ function: String = #function,
@@ -46,7 +46,7 @@ class LogKit {
 
 
 //MARK: LogLevel enum and Comparable protocol implementation
-enum LogLevel: Int, Comparable {
+public enum LogLevel: Int, Comparable {
     case Disabled   = 0
     case Error      = 1
     case Warning    = 2
@@ -72,18 +72,18 @@ enum LogLevel: Int, Comparable {
     }
 }
 
-func >(lhs: LogLevel, rhs: LogLevel) -> Bool{
+public func >(lhs: LogLevel, rhs: LogLevel) -> Bool{
     return lhs.rawValue > rhs.rawValue
 }
 
-func <(lhs: LogLevel, rhs: LogLevel) -> Bool{
+public func <(lhs: LogLevel, rhs: LogLevel) -> Bool{
     return lhs.rawValue < rhs.rawValue
 }
 
-func >=(lhs: LogLevel, rhs: LogLevel) -> Bool{
+public func >=(lhs: LogLevel, rhs: LogLevel) -> Bool{
     return lhs.rawValue >= rhs.rawValue
 }
 
-func <=(lhs: LogLevel, rhs: LogLevel) -> Bool{
+public func <=(lhs: LogLevel, rhs: LogLevel) -> Bool{
     return lhs.rawValue <= rhs.rawValue
 }
