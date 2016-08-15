@@ -1,11 +1,11 @@
 
-LogKit is just another Swift logging framework. <br/>
-It was made be to simple to use, read and maintain.<br/>
-It works with Xcode 7.3 and Swift 2.2.<br/>
-Compatible with iOS 7.1+ and Cathage (iOS 8.0+)<br/>
+LogKit is just another Swift logging framework.  
+It was made be to simple to use, read and maintain.  
+It works with Xcode 8 and Swift 3  
+Compatible with iOS 7.1+ and with Carthage (iOS 8.0+)  
 
 #### iOS 7.1 support
-Given iOS 7 limitations with frameworks, to use LogKit in your iOS 7.1+ project, just drag & drop LogKit.swift into your project.
+Given iOS 7 limitations with frameworks, to use LogKit in your iOS 7.1 project, just drag & drop the LogKit source files into your project.
 
 
 ### Configuration 
@@ -14,7 +14,7 @@ On AppDelegate setup the log level, on the *didFinishLaunchingWithOptions* funct
 
 ```swift
 // change the log level to the most convenient one for you
-LogKit.setup(.Verbose)
+LogKit.setup(level:.Verbose)
 ```
 
 You can choose any of the items in this enum, including Disabled, to configure your setup.
@@ -33,7 +33,7 @@ enum LogLevel: Int, Comparable {
 Then, anywere in your code, just call
 
 ```swift
-LogKit.log(.Info, message: "User signup success")
+LogKit.log(level:.Info, message: "User signup success")
 ```
 
 
@@ -42,5 +42,7 @@ LogKit.log(.Info, message: "User signup success")
 This framework was inspired in the work of other logging frameworks, but not a copy of any of them.
 
 
-
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/piresbruno/LogKit/releases) ![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
+![Build](https://www.bitrise.io/app/93bb51c1de5dd228.svg?token=QzEV4V8xkznqBPDKyChWLA&branch=swift3)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
+![Swift version](https://img.shields.io/badge/Swift%20-3.x-orange.svg) 
+![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)  
