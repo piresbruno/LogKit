@@ -24,7 +24,7 @@ public class LogKit {
     ///   - message: message to be written in the debug console
     /// - returns: Void
     public class func log(level:LogLevel,
-                   message:AnyObject,
+                   message:Any,
                    _ path: String = #file,
                      _ function: String = #function,
                        _ lineNumber: Int = #line){
