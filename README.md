@@ -46,3 +46,4 @@ This framework was inspired in the work of other logging frameworks, but not a c
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) 
 ![Swift version](https://img.shields.io/badge/Swift%20-3.x-orange.svg) 
 ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)  
+
