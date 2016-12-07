@@ -11,7 +11,7 @@ import Foundation
 public class LogKit {
     
     private static let instance = LogKit()
-    private var level:LogLevel = .Disabled
+    private var level:LogLevel = .disabled
     
     public class func setup(level:LogLevel){
         self.instance.level = level
@@ -38,7 +38,7 @@ public class LogKit {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss:SSS"
         
-        if self.instance.level >= level && level != LogLevel.Disabled{
+        if self.instance.level >= level && level != .disabled{
             print("\(level.description.uppercased()) | \(dateFormatter.string(from: NSDate() as Date)) [\(filePath):\(lineNumber)]: \(message)")
         }
     }
@@ -47,26 +47,26 @@ public class LogKit {
 
 //MARK: LogLevel enum and Comparable protocol implementation
 public enum LogLevel: Int, Comparable {
-    case Disabled   = 0
-    case Error      = 1
-    case Warning    = 2
-    case Info       = 3
-    case Debug      = 4
-    case Verbose    = 5
+    case disabled   = 0
+    case error      = 1
+    case warning    = 2
+    case info       = 3
+    case debug      = 4
+    case verbose    = 5
     
     var description: String {
         switch self {
-        case .Disabled:
+        case .disabled:
             return "Disabled"
-        case .Error:
+        case .error:
             return "  Error"
-        case .Warning:
+        case .warning:
             return "Warning"
-        case .Info:
+        case .info:
             return "   Info"
-        case .Debug:
+        case .debug:
             return "  Debug"
-        case .Verbose:
+        case .verbose:
             return "Verbose"
         }
     }
