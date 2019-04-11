@@ -1,7 +1,7 @@
 
 LogKit is just another Swift logging framework.  
 It was made be to simple to use, read and maintain.  
-It works with Xcode 8 and Swift 3  
+It works with Xcode 10.2 and Swift 5  
 Compatible with iOS 7.1+ and with Carthage (iOS 8.0+)  
 
 #### iOS 7.1 support
